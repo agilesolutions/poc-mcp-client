@@ -1,0 +1,36 @@
+server:
+  port: 80
+
+spring:
+  ai:
+    mcp:
+      client:
+        sse:
+          transport-mode: WEBFLUX
+          connections:
+            person-mcp-server:
+              url: http://localhost:8060
+            account-mcp-server:
+              url: http://localhost:8040
+    ollama:
+      chat:
+        options:
+# see https://ollama.com/dwightfoster03/functionary-small-v3.1
+          model: smollm2
+      base-url: https://0479-34-83-149-94.ngrok-free.app
+
+logging:
+  level:
+    root: INFO
+    com.agilesolutions.chatbot: DEBUG
+    org.springframework.ai: DEBUG
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,metrics,prometheus
+  metrics:
+    export:
+      prometheus:
+        enabled: true
