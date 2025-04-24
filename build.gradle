@@ -36,7 +36,7 @@ dependencies {
     implementation platform("io.modelcontextprotocol.sdk:mcp-bom:0.8.1")
 
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'org.springframework.ai:spring-ai-mcp-client-webflux-spring-boot-starter'
+    implementation 'org.springframework.ai:spring-ai-mcp-client-spring-boot-starter'
     implementation 'org.springframework.boot:spring-boot-starter-logging'
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'com.h2database:h2:1.4.200'

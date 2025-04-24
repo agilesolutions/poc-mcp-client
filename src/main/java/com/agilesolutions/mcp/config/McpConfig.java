@@ -2,7 +2,8 @@ package com.agilesolutions.mcp.config;
 
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.client.advisor.SimpleLoggerAdvisor;
-import org.springframework.ai.tool.ToolCallbackProvider;
+import org.springframework.ai.chat.model.ChatModel;
+import org.springframework.ai.mcp.SyncMcpToolCallbackProvider;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -10,15 +11,13 @@ import org.springframework.context.annotation.Configuration;
 public class McpConfig {
 
     @Bean
-    ChatClient chatClient(ChatClient.Builder chatClientBuilder, ToolCallbackProvider tools) {
+    ChatClient chatClient(ChatModel chatModel, SyncMcpToolCallbackProvider toolCallbackProvider) {
 
-        return chatClientBuilder
-                .defaultTools(tools)
-                .defaultAdvisors(
-//                        new PromptChatMemoryAdvisor(chatMemory),
-                        new SimpleLoggerAdvisor())
+        return ChatClient
+                .builder(chatModel)
+                .defaultTools(toolCallbackProvider.getToolCallbacks())
+                .defaultAdvisors(new SimpleLoggerAdvisor())
                 .build();
-
 
     }
 
