@@ -35,7 +35,7 @@ public class AccountController {
     String balanceByPersonId(@PathVariable String personId) {
         PromptTemplate pt = new PromptTemplate("""
                 How many accounts has person with {personId} ID ?
-                Return person name, nationality and a total balance on his/her accounts.
+                Send a notification message with person name, nationality and a total balance on his/her accounts. 
                 """);
         Prompt p = pt.create(Map.of("personId", personId));
         return this.chatClient.prompt(p)
