@@ -19,7 +19,7 @@ spring:
         options:
 # see https://ollama.com/dwightfoster03/functionary-small-v3.1
           model: smollm2
-      base-url: https://cb3c-34-83-83-26.ngrok-free.app
+      base-url: https://e488-34-67-71-235.ngrok-free.app
 
 logging:
   level:

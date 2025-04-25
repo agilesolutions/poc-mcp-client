@@ -28,6 +28,7 @@ public class PersonController {
     private final ChatClient chatClient;
     private final List<McpSyncClient> mcpSyncClients;
 
+
     @GetMapping("/nationality/{nationality}")
     String findByNationality(@PathVariable String nationality) {
 
