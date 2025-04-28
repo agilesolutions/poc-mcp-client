@@ -8,6 +8,8 @@ spring:
         sse:
           transport-mode: WEBFLUX
           connections:
+            stock-mcp-server:
+              url: http://localhost:8080
             person-mcp-server:
               url: http://localhost:8060
             account-mcp-server:
