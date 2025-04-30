@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: findata-deployment
+  name: mcpclient-deployment
   labels:
-    app: findata
+    app: mcpclient
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: findata
+      app: mcpclient
   template:
     metadata:
       annotations:
         kubernetes.io/change-cause: "Updated image to #{VERSION}#"
       labels:
-        app: findata
+        app: mcpclient
     spec:
       containers:
-        - name: findata
+        - name: mcpclient
           image: agilesolutions/mcpclient:latest
           ports:
             - containerPort: 80
@@ -70,13 +70,13 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: findata-loadbalancer-service
+  name: mcpclient-loadbalancer-service
   labels:
-    app: findata
+    app: mcpclient
 spec:
   type: LoadBalancer
   selector:
-    app: findata
+    app: mcpclient
   ports:
     - port: 80
       targetPort: 80
