@@ -114,11 +114,11 @@ bootJar {
 }
 
 task dockerBuild(type: Exec) {
-    commandLine 'docker', 'build', '-t', "agilesolutions/pocmcpclient:${version}", '.'
+    commandLine 'docker', 'build', '-t', "agilesolutions/mcpclient:${version}", '.'
 }
 
 task dockerPush(type: Exec) {
-    commandLine 'docker', 'push', "agilesolutions/pocmcpclient:${version}"
+    commandLine 'docker', 'push', "agilesolutions/mcpclient:${version}"
 }
 
 

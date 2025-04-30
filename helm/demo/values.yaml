@@ -2,7 +2,7 @@ namespace: ai
 replicaCount: 1
 
 image:
-  repository: agilesolutions/findata
+  repository: agilesolutions/mcpclient
   tag: latest
   pullPolicy: IfNotPresent
 
