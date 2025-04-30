@@ -1,0 +1,41 @@
+server:
+  port: 80
+
+spring:
+  ai:
+    ollama:
+      chat:
+        options:
+# see https://ollama.com/dwightfoster03/functionary-small-v3.1
+          model: smollm2
+      base-url: https://e488-34-67-71-235.ngrok-free.app
+
+logging:
+  level:
+    root: INFO
+    com.agilesolutions.chatbot: DEBUG
+    org.springframework.ai: DEBUG
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,metrics,prometheus
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+
+twelvedata:
+  api:
+    url: https://api.twelvedata.com/
+    key: demo
+
+com:
+  agilesolutions:
+    evaluation:
+      model: bespoke-minicheck
+      base-url: https://e488-34-67-71-235.ngrok-free.app
+    request:
+      model: smollm2
+      base-url: https://e488-34-67-71-235.ngrok-free.app
