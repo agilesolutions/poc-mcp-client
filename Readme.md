@@ -16,6 +16,19 @@ The MCP servers from this demo will enable LLM's to retrieve data from external 
   - Ability to store and retrieve data from past interactions
   - Learn and adapt: improve its performance over time through experience
 
+## Observability
+Based on the observability features in the Spring framework (Micrometer), Spring AI provides metrics and tracing functionality for its core components, including ChatClient, Advisors, ChatModel.
+
+Check actuator REST API to list up all metrics enabled on this project.
+```
+http://localhost:8080/actuator/metrics
+```
+For each metric, there are several tags. For example, if you open the URL for the gen_ai.client.token.usage metric:
+```
+http://localhost:8080/actuator/metrics/gen_ai.client.token.usage
+```
+For this demo prompt content is exported on the metrics, this might expost sensitive or private information, so not advised in prod environments.
+
 
 ## Ollama CLI Load and run SMOLLM2 compact languague model on Google Colab
 The following steps allows you to run a LLM model with Ollama and connect that model over REST API from your SpringBoot application.
