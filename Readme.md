@@ -47,13 +47,13 @@ That AKS Kubernetes cluster was provisioned through the Terraform scripts that y
 
 ## Architecture
 ### Tech Stack
-- Spring Boot (Microservices)
-- Spring AI (Azure OpenAI API integration)
-- Azure AI foundry OpenAI (GPT-based chat responses)
-- Terraform (Infrastructure as Code)
-- Azure DevOps Pipelines (CI/CD automation)
-- Helm & Kubernetes (Optional deployment)
-## GitHub repository structure, including:
+- Spring Framework and SpringBoot (makes it easy to create stand-alone, production-grade Spring based Applications that you can "just run")
+- Spring AI (provides abstractions that serve as the foundation for developing AI applications)
+- Azure AI foundry (providing a unified platform for enterprise AI operations, model builders, and application development)
+- Terraform (managing infrastructure using a declarative configuration language, making it easier to automate Azure Cloud infrastructure provisioning, all resources needed to run this application including AKS Kubernetes cluster, storage accounts, AI models, etc...)
+- Azure DevOps Pipelines (Combing continuous integration (CI) and continuous delivery (CD) to test, build, and deliver code to Azure ACR container registry and finally deploy as POD on AKS Kubernetes)
+- Helm (Packaging and deployment tools, helps to define, install, and upgrade even the most complex Kubernetes application)
+### Structured overview of GitHub components and sources:
 - Java components (Spring Boot chatbot API)
 - Terraform scripts (to create an AKS cluster)
 - Gradle build file (for dependencies and build tasks)
@@ -105,7 +105,7 @@ spring-azure-ai/
 │── LICENSE                         # Open-source license
 ```
 
-# Logging, Monitoring (*Azure AI search production-ready*)
+## Logging, Monitoring (*Azure AI search production-ready*)
 Collect telemetry data for search traffic analytics. Search traffic analytics is a pattern for collecting telemetry about user interactions with your Azure AI Search application, such as user-initiated clickstream events and keyboard inputs. Using this information, you can determine the effectiveness of your search solution, including clickthrough rate and which query inputs yield zero results.
 
 - Add a telemetry client
