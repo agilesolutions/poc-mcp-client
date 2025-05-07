@@ -26,7 +26,7 @@ MCP Client and Server components are modelled as separate MicroServices, version
 That AKS Kubernetes cluster was provisioned through the Terraform scripts that you can find on the [POC-MCP-CLIENT](https://github.com/agilesolutions/poc-mcp-client) project, this project acts as the central AI Agent running on AKS connecting to external tools also running on that same AKS cluster as POD.
 - **POC-MCP-CLIENT** : The actual AI Agent calling MCP servers to fetching (*preceive*) additional data and executing external tasks like sending notifications and updating DB records. ([sources github](https://github.com/agilesolutions/poc-mcp-client))
 - **STOCK-MCP-SERVER** : MCP server providing tools to fetch financial assets from [twelvedata.com](https://twelvedata.com/). ([sources github](https://github.com/agilesolutions/stock-mcp-server))
-- **PORTFOLIO-MCP-SERVER** : MCP server to fetching and updating stock portfolio records from proprietary RDMS database like PostgreSQL. ([sources github](https://github.com/agilesolutions/account-mcp-server)) 
+- **PORTFOLIO-MCP-SERVER** : MCP server to fetching and updating stock portfolio records from proprietary RDMS database like PostgreSQL. ([sources github](https://github.com/agilesolutions/portfolio-mcp-server)) 
 - **NOTIFICATION-MCP-SERVER** : MCP server to sending out notifications over WhatsUp. ([sources github](https://github.com/agilesolutions/notification-mcp-server))
 
 ### What kind of software components can you find on this project 

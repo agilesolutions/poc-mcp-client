@@ -12,6 +12,8 @@ spring:
         sse:
           transport-mode: WEBFLUX
           connections:
+            portfolio-mcp-server:
+              url: http://localhost:8090
             stock-mcp-server:
               url: http://localhost:8080
             person-mcp-server:
