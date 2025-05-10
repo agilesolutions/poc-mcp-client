@@ -1,4 +1,17 @@
-# Agentic AI ShowCase with Spring AI and Azure AI Foundry
+# About this ShowCase project demonstrating Agentic AI
+Agentic AI is the frontier and 3rd wave of AI (1. Predictive, 2. Generative). AI Agents are different from its predecessors in the sense that they are able act autonomously without human supervision and interference.
+Agentic AI is generally used in the field of automating repetitive tasks, like data entry, data analysis, inventory management, order management and customer support...
+## Why should you do this.
+1. freeing up human resources, letting these resources focus on strategic and create tasks like innovation. This will at the end improve the overall organization performance.
+2. Agents are not getting tired, do not need weekends and holidays and can work around the clock 24/7.
+
+## How do you do that.
+The heart of AI is the LLM, this is the brain and memory of AI, LLM's can reason based on the knowledge it was provided, that memory and knowledge is limited to the data it was trained for, knowledge cut-off. 
+Turning an LLM into an AI Agent what you see demonstrated from this ShowCase project means providing the capabilities to read real-time and domain-specific data and autonomously act after reasoning based on that data they were provided, like sending notifications, change the state of your business systems like inserting orders on your OMS.
+Software integrators like me use frameworks like Spring AI to providing these capabilities by giving it the tools to read and act..... that is what I do and try to demonstrate through a simple Use Case.
+
+
+## Agentic AI ShowCase with Spring AI and Azure AI Foundry
 This project demonstrates how to implement an AI Agent with [Java Spring AI](https://docs.spring.io/spring-ai/reference/index.html) framework and how use [Terraform](https://developer.hashicorp.com/terraform) Infrastructure-as-Code (IaC) tool to configure Azure AI Foundry components to hosting LLM models and Azure AKS Kubernetes cluster to run the containerized AI Agent as POD.
 
 ## Model Context Protocol (MCP)
